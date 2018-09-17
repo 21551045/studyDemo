@@ -23,7 +23,10 @@ Function.prototype.after = function (fn) {
   }
 };
 
-var colorCheck = function (color,memory,number,stock,nextBtn) {
+var colorCheck = function (obj,color,memory,number,stock,nextBtn) {
+  if (obj === colorSelect) { // 如果改变的是选择颜色下拉框
+    colorInfo.innerHTML = color;
+  }
   if(!color) {
     nextBtn.disabled = true;
     nextBtn.innerHTML = '请选择手机颜色';
@@ -32,7 +35,10 @@ var colorCheck = function (color,memory,number,stock,nextBtn) {
   }
 }
 
-var memoryCheck = function (color,memory,number,stock,nextBtn) {
+var memoryCheck = function (obj,color,memory,number,stock,nextBtn) {
+  if (obj === memorySelect) {
+    memoryInfo.innerHTML = memory;
+  }
   if(!memory) {
     nextBtn.disabled = true;
     nextBtn.innerHTML = '请选择内存大小';
@@ -41,7 +47,10 @@ var memoryCheck = function (color,memory,number,stock,nextBtn) {
   }
 }
 
-var numCheck = function (color,memory,number,stock,nextBtn) {
+var numCheck = function (obj,color,memory,number,stock,nextBtn) {
+  if (obj === numberInput) {
+    numberInfo.innerHTML = number;
+  }
   if(!Number.isInteger(number - 0) || number <= 0) {
     nextBtn.disabled = true;
     nextBtn.innerHTML = '请输入正确的购买数量';
@@ -70,13 +79,6 @@ var mediator = (function () {
         memory = memorySelect.value, // 内存
         number = numberInput.value, // 数量
         stock = goods[color + '|' + memory]; // 颜色和内存对应的手机库存数量
-      if (obj === colorSelect) { // 如果改变的是选择颜色下拉框
-        colorInfo.innerHTML = color;
-      } else if (obj === memorySelect) {
-        memoryInfo.innerHTML = memory;
-      } else if (obj === numberInput) {
-        numberInfo.innerHTML = number;
-      }
       checkBtn(color,memory,number,stock,nextBtn)
      
     }
