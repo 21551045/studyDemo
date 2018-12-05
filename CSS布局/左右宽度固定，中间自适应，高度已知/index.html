@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <!-- position:abs -->
+  <div class="position-box">
+    <style>
+      .position-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .position-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .position-main {
+        margin-left: 300px;
+        margin-right: 300px;
+        height: 100px;
+        background-color: #ccc;
+        overflow: scroll;
+        word-wrap: break-word;
+      }
+    </style>
+    <div class="position-left">left</div>
+    <div class="position-main">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</div>
+    <div class="position-right">right</div>
+  </div>
+  <div class="float-box">
+    <style>
+      .float-left {
+        float: left;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .float-right {
+        float: right;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .float-main {
+        overflow: auto;
+        height: 100px;
+        background-color: #ccc;
+        word-wrap: break-word;
+      }
+    </style>
+    <div class="float-left">left</div>
+    <div class="float-right">right</div>
+    <div class="float-main">mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain</div>
+  </div>
+  <div class="flex-box">
+    <style>
+      .flex-box {
+        display: flex;
+      }
+
+      .flex-left {
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .flex-right {
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .flex-main {
+        flex: 1;
+        height: 100px;
+        background-color: #ccc;
+        word-wrap: break-word;
+        /* overflow: hidden; */
+        width: 0;
+      }
+
+      /* overflow 和width：0 都是解决内容过长不换行挤压其他盒子的问题 */
+      /* .flex-main div{
+        overflow-wrap:break-word;
+
+      } */
+    </style>
+    <div class="flex-left">left</div>
+    <div class="flex-main">
+      <div>
+        mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain
+      </div>
+    </div>
+    <div class="flex-right">right</div>
+  </div>
+  <div class="table-box">
+    <style>
+      .table-box {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        word-wrap: break-word;
+      }
+
+      /* table-layout:fixed;word-wrap :解决单元格内容较多不换行的问题 */
+      /* table-layout:fixed 表示水平布局仅取决于表格宽度、列宽度、表格边框宽度、单元格间距，而与单元格的内容无关 */
+      .table-left {
+        display: table-cell;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .table-right {
+        display: table-cell;
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .table-main {
+        display: table-cell;
+        height: 100px;
+        background-color: #ccc;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+    </style>
+    <div class="table-left">left</div>
+    <div class="table-main">
+        mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain
+    </div>
+    <div class="table-right">right</div>
+  </div>
+  <div class="grid-box">
+    <style>
+      .grid-box {
+        display: grid;
+        /* width: 100%; */
+        word-wrap: break-word;
+        /* overflow: hidden; */
+        grid-template-columns: 300px auto 300px;
+      }
+      
+      .grid-left {
+        /* width: 300px; */
+        height: 100px;
+        background-color: pink;
+      }
+
+      .grid-right {
+        /* width: 300px; */
+        height: 100px;
+        background-color: pink;
+      }
+
+      .grid-main {
+        height: 100px;
+        background-color: #ccc;
+        word-wrap: break-word;
+        overflow: scroll;
+      }
+    </style>
+    <div class="grid-left">left</div>
+    <div class="grid-main">
+      mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain
+    </div>
+    <div class="grid-right">right</div>
+  </div>
+</body>
+
+</html>
